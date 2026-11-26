@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>National Statistics Bureau — Official Data Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-crest">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">National Statistics Bureau</span>
+          <span class="brand-sub">Official Open Data & Economic Analytics</span>
+        </div>
+      </div>
+      <div class="header-tools">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input type="text" id="indicator-search" placeholder="Search indicators (GDP, CPI, Jobs...)" aria-label="Search indicators">
+        </div>
+        <button id="theme-toggle" class="btn-icon" title="Toggle dark/light theme" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+        <button id="export-btn" class="btn-action">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          Export Data
+        </button>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <div class="nav-inner">
+        <a href="#/" class="nav-link active" data-route="overview">National Overview</a>
+        <a href="#/economy" class="nav-link" data-route="economy">Macroeconomics & Trade</a>
+        <a href="#/demographics" class="nav-link" data-route="demographics">Population & Demographics</a>
+        <a href="#/labour" class="nav-link" data-route="labour">Labour Market & Wages</a>
+        <a href="#/energy" class="nav-link" data-route="energy">Energy & Sustainability</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="app" class="site-main">
+    <!-- Dynamic views render here -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <strong>National Statistics Bureau (NSB)</strong> — Released under Open Government Data License.
+        <span class="footer-updated">Catalog update: November 2026 • Verified offline bundle</span>
+      </div>
+      <div class="footer-links">
+        <a href="#/">Home</a>
+        <a href="#/economy">Economy</a>
+        <a href="#/demographics">Demographics</a>
+        <a href="#/labour">Labour</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

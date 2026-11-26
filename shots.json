@@ -1,0 +1,34 @@
+[
+  {
+    "file": "1-overview.png",
+    "path": "#/",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "2-economy.png",
+    "path": "#/economy",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "3-demographics.png",
+    "path": "#/demographics",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "4-mobile-labour.png",
+    "path": "#/labour",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  }
+]
