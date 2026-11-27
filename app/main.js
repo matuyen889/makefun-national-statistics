@@ -30,7 +30,7 @@ function navigate() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// Live Search Filter
+// Live Search Filter across all indicators
 function setupSearch() {
   const input = document.getElementById('indicator-search');
   if (!input) return;
@@ -49,10 +49,10 @@ function setupSearch() {
   });
 }
 
-// Theme Switcher (Light / Dark)
+// Theme Switcher (Default: Institutional Dark)
 function setupTheme() {
   const btn = document.getElementById('theme-toggle');
-  const current = localStorage.getItem('nsb-theme') || 'light';
+  const current = localStorage.getItem('nsb-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', current);
 
   btn?.addEventListener('click', () => {
@@ -63,20 +63,20 @@ function setupTheme() {
   });
 }
 
-// CSV Export
+// Official CSV Data Export
 function setupExport() {
   const btn = document.getElementById('export-btn');
   btn?.addEventListener('click', () => {
-    let csv = "Indicator,Value,Period,Detail\n";
+    let csv = "Indicator,Value,Period,Detail,Source\n";
     NATIONAL_STATS.kpis.forEach(k => {
-      csv += `"${k.label}","${k.value}","${k.change}","${k.detail}"\n`;
+      csv += `"${k.label}","${k.value}","${k.change}","${k.detail}","${k.source}"\n`;
     });
 
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `National_Statistics_${new Date().toISOString().slice(0, 10)}.csv`;
+    a.download = `Veridia_National_Statistics_${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   });
@@ -89,6 +89,5 @@ window.addEventListener('DOMContentLoaded', () => {
   setupSearch();
   setupExport();
   navigate();
-  // Signal to screenshot capture script that DOM is rendered
   window.siteReady = true;
 });
